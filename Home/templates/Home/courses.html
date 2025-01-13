@@ -1,0 +1,35 @@
+{% extends "Home/index.html" %}
+
+{% block style %}
+
+    <style>
+
+    </style>
+    {% endblock style %}
+
+{% block main %}
+<style>
+.box {
+    background: rgba(131, 225, 253, 0.8);
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.5s;
+}
+</style>
+<main>
+    <div class="background-image">
+        <div class="box-container">
+            <div class="box">Python</div>
+            <div class="box">JavaScript</div>
+            <div class="box">Java</div>
+            <div class="box">Django</div>
+            <div class="box">JavaScript</div>
+            <div class="box">Spring Boot</div>
+        </div>
+    </div>
+</main>
+{% endblock main %}
