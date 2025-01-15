@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: #f4f4f9; /* Light background for consistency */
+    background-color: #f4f4f9;
+    /* Light background for consistency */
 }
 
 .subbody {
@@ -20,7 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 40px;
     background-color: #48594a;
     color: rgb(118, 42, 193);
     border-radius: 20px;
@@ -58,7 +59,8 @@ header {
 
 /* Hamburger Menu */
 .navbar-toggle {
-    display: none; /* Initially hide the hamburger icon */
+    display: none;
+    /* Initially hide the hamburger icon */
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
@@ -84,7 +86,7 @@ header {
 .background-image {
     background: url('../images/home.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(70vh - 100px);
+    height: calc(80vh - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +126,7 @@ header {
 @media (max-width: 768px) {
     .box-container {
         grid-template-columns: repeat(2, 1fr);
-        
+
     }
 
     .navbar {
@@ -132,7 +134,8 @@ header {
     }
 
     .navbar-links {
-        display: none; /* Hide the navbar by default on small screens */
+        display: none;
+        /* Hide the navbar by default on small screens */
         width: 100%;
         text-align: center;
     }
@@ -142,11 +145,13 @@ header {
     }
 
     .navbar-toggle {
-        display: flex; /* Show the hamburger icon only on mobile */
+        display: flex;
+        /* Show the hamburger icon only on mobile */
     }
 
     .navbar-links.active {
-        display: block; /* Show the navbar when active */
+        display: block;
+        /* Show the navbar when active */
     }
 }
 
@@ -158,8 +163,10 @@ header {
 
 /* Section Styles */
 section {
-    padding: 50px 20px; /* Reduced padding for better section spacing */
-    background-color: #c7ffd7; /* Light background color for sections */
+    padding: 50px 20px;
+    /* Reduced padding for better section spacing */
+    background-color: #c7ffd7;
+    /* Light background color for sections */
     border-radius: 10px;
     margin: 10px auto;
     width: 100%;
@@ -183,5 +190,77 @@ section p {
 }
 
 section:hover {
-    background-color: #70ed6c; /* Slightly brighter background on hover */
+    background-color: #70ed6c;
+    /* Slightly brighter background on hover */
+}
+
+/* About Us and Contact Us Section Styles */
+section {
+    padding: 50px 20px;
+    /* Keep existing padding */
+    background-color: #c7ffd7;
+    /* Keep existing background color */
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+section h2 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #48594a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+footer .footer-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+footer .footer-links li a:hover {
+    color: #70ed6c;
+    /* Highlight color on hover */
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    footer .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
