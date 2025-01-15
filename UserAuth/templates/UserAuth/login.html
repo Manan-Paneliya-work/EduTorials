@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'UserAuth/css/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="textbox">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="actions">
+                    <a href="#">Forgot Password?</a>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <div class="register">
+                <p>Don't have an account? <a href="/register">Register</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

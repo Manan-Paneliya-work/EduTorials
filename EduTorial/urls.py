@@ -21,10 +21,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from EduTorial import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Home.urls')),  # Including URLs from the Home app
+    path('', include('UserAuth.urls')), 
 ]
 
 # Serving media files during development

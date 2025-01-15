@@ -124,6 +124,7 @@ header {
 @media (max-width: 768px) {
     .box-container {
         grid-template-columns: repeat(2, 1fr);
+        
     }
 
     .navbar {

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'UserAuth/css/register.css' %}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Register</h2>
+            <form id="registrationForm" action="#" method="POST" onsubmit="return validateForm()">
+                <!-- Google Sign In -->
+                <div class="google-signin">
+                    <button type="button" onclick="googleSignIn()">Sign in with Google</button>
+                </div>
+                
+                <!-- Personal Information -->
+                <div class="textbox">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="textbox">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                
+                <!-- Security Features -->
+                <!-- <div class="security">
+                    <div class="captcha">
+                        <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
+                    </div>
+                    <div class="security-question">
+                        <label for="securityQuestion">Security Question (Optional):</label>
+                        <input type="text" id="securityQuestion" placeholder="What is your pet's name?">
+                    </div>
+                </div> -->
+
+                <!-- Address Information -->
+                <!-- <div class="address">
+                    <input type="text" id="address" placeholder="Address" required>
+                </div> -->
+
+                <!-- Terms and Conditions -->
+                <div class="terms">
+                    <input type="checkbox" id="terms" required> I accept the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Register</button>
+            </form>
+            <div class="login-link">
+                <p>Already have an account? <a href="/login">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="{% static 'AuthUser/js/register.js' %}"></script>
+</body>
+</html>
