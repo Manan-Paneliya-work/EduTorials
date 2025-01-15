@@ -1,34 +1,197 @@
 {% extends "Home/index.html" %}
 
 {% block style %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+    }
 
-    <style>
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
 
-    </style>
-    {% endblock style %}
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .course-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .course-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .course-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .course-card .content {
+        padding: 15px;
+    }
+
+    .course-card h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .course-card p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .course-card .price {
+        font-weight: bold;
+        color: #007BFF;
+    }
+
+    .course-card {
+        background-color: rgb(255, 224, 214);
+    }
+
+    @media (max-width: 600px) {
+        .course-card img {
+            height: 100px;
+        }
+    }
+
+    .courses-head {
+        display: inline-block;
+        background-color: #23c414;
+        margin: 23px;
+        padding: 23px;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        margin: 12px;
+        justify-content: end;
+        margin-bottom: 3%;
+    }
+
+    .search-container input[type="text"] {
+        padding: 10px;
+        border: 2px solid green;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+    }
+
+    .search-container button {
+        padding: 10px 20px;
+        font-size: 16.5px;
+        color: white;
+        background-color: red;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-container button:hover {
+        background-color: darkred;
+    }
+</style>
+{% endblock style %}
 
 {% block main %}
-<style>
-.box {
-    background: rgba(131, 225, 253, 0.8);
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.5s;
-}
-</style>
 <main>
-    <div class="background-image">
-        <div class="box-container">
-            <div class="box">Python</div>
-            <div class="box">JavaScript</div>
-            <div class="box">Java</div>
-            <div class="box">Django</div>
-            <div class="box">JavaScript</div>
-            <div class="box">Spring Boot</div>
+    {% load static %}
+    <div class="container">
+        <h1 class="courses-head">Explore Our Courses</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <div class="courses">
+            <div class="course-card">
+                <img src="{% static 'Home/images/webdev.jpg' %}" alt="Web Development">
+                <div class="content">
+                    <h3>Web Development</h3>
+                    <p>Learn to build amazing websites</p>
+                    <p class="price">Free</p>
+                    <p>Reviews: 4.5/5</p>
+                    <p>Launch Date: Jan 1, 2023</p>
+                    <p>Users Completed: 1200</p>
+                    <p>Auther : Paneliya Manan</p>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="{% static 'Home/images/ds.jpg' %}" alt="Data Science">
+                <div class="content">
+                    <h3>Data Science</h3>
+                    <p>Master data analysis and visualization</p>
+                    <p class="price">Rs. 2000</p>
+                    <p>Reviews: 4.7/5</p>
+                    <p>Launch Date: Feb 15, 2023</p>
+                    <p>Users Completed: 900</p>
+                    <p>Auther : Paneliya Manan</p>  
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="{% static 'Home/images/ml.jpg' %}" alt="Machine Learning">
+                <div class="content">
+                    <h3>Machine Learning</h3>
+                    <p>Dive into AI and ML techniques</p>
+                    <p class="price">Rs. 3000</p>
+                    <p>Reviews: 4.8/5</p>
+                    <p>Launch Date: Mar 10, 2023</p>
+                    <p>Users Completed: 1500</p>
+                </div>
+            </div>
+
+           <div class="course-card">
+                <img src="{% static 'Home/images/dm.jpg' %}" alt="Digital Marketing">
+                <div class="content">
+                    <h3>Digital Marketing</h3>
+                    <p>Understand online marketing strategies</p>
+                    <p class="price">Free</p>
+                    <p>Reviews: 4.6/5</p>
+                    <p>Launch Date: Apr 5, 2023</p>
+                    <p>Users Completed: 800</p>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="{% static 'Home/images/uiux.jpg' %}" alt="UI/UX Design">
+                <div class="content">
+                    <h3>UI/UX Design</h3>
+                    <p>Design user-friendly interfaces</p>
+                    <p class="price">Rs. 1500</p>
+                    <p>Reviews: 4.4/5</p>
+                    <p>Launch Date: May 20, 2023</p>
+                    <p>Users Completed: 600</p>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="{% static 'Home/images/mad.jpg' %}" alt="Mobile App Development">
+                <div class="content">
+                    <h3>Mobile App Development</h3>
+                    <p>Create apps for iOS and Android</p>
+                    <p class="price">Rs. 2500</p>
+                    <p>Reviews: 4.9/5</p>
+                    <p>Launch Date: Jun 30, 2023</p>
+                    <p>Users Completed: 1000</p>
+                </div>
+            </div>
         </div>
     </div>
 </main>

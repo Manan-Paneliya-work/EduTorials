@@ -4,12 +4,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-   
 }
-.subbody{
-    background-color: rgb(230, 255, 199);
+
+body {
+    background-color: #f4f4f9; /* Light background for consistency */
+}
+
+.subbody {
+    background-color: #8bba88;
     border-radius: 20px;
 }
+
 /* Header Styles */
 header {
     display: flex;
@@ -20,10 +25,7 @@ header {
     color: rgb(118, 42, 193);
     border-radius: 20px;
 }
-body{
-    background-color: rgb(0, 0, 0);
-    
-}
+
 .logo img {
     width: 70px;
     height: 70px;
@@ -56,7 +58,7 @@ body{
 
 /* Hamburger Menu */
 .navbar-toggle {
-    display: none;  /* Initially hide the hamburger icon */
+    display: none; /* Initially hide the hamburger icon */
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
@@ -80,8 +82,9 @@ body{
 
 /* Background Image */
 .background-image {
-    background: url('background.jpg') no-repeat center center/cover;
-    height: calc(100vh - 60px);
+    background: url('../images/home.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(70vh - 100px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,13 +96,15 @@ body{
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     width: 80%;
+    margin: 20px auto;
 }
+
 .box-container a {
-    text-decoration:none;
+    text-decoration: none;
     color: black;
 }
+
 .box {
-    
     background: rgba(97, 248, 70, 0.8);
     padding: 20px;
     text-align: center;
@@ -108,7 +113,6 @@ body{
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.5s;
-    
 }
 
 .box:hover {
@@ -127,7 +131,7 @@ body{
     }
 
     .navbar-links {
-        display: none;  /* Hide the navbar by default on small screens */
+        display: none; /* Hide the navbar by default on small screens */
         width: 100%;
         text-align: center;
     }
@@ -137,11 +141,11 @@ body{
     }
 
     .navbar-toggle {
-        display: flex;  /* Show the hamburger icon only on mobile */
+        display: flex; /* Show the hamburger icon only on mobile */
     }
 
     .navbar-links.active {
-        display: block;  /* Show the navbar when active */
+        display: block; /* Show the navbar when active */
     }
 }
 
@@ -150,9 +154,10 @@ body{
         grid-template-columns: 1fr;
     }
 }
+
 /* Section Styles */
 section {
-    padding: 250px 20px;
+    padding: 50px 20px; /* Reduced padding for better section spacing */
     background-color: #c7ffd7; /* Light background color for sections */
     border-radius: 10px;
     margin: 10px auto;
@@ -163,7 +168,7 @@ section {
 }
 
 section h2 {
-    font-size: 100px;
+    font-size: 40px;
     color: #333;
     margin-bottom: 15px;
     text-align: center;
@@ -179,4 +184,3 @@ section p {
 section:hover {
     background-color: #70ed6c; /* Slightly brighter background on hover */
 }
-
