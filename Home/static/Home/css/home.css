@@ -4,21 +4,30 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+   
 }
-
+.subbody{
+    background-color: rgb(230, 255, 199);
+    border-radius: 20px;
+}
 /* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #48594a;
     color: rgb(118, 42, 193);
+    border-radius: 20px;
 }
-
+body{
+    background-color: rgb(0, 0, 0);
+    
+}
 .logo img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 30px;
 }
 
 .navbar {
@@ -41,7 +50,8 @@ header {
 }
 
 .navbar ul li a:hover {
-    background-color: #555;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 /* Hamburger Menu */
@@ -84,8 +94,12 @@ header {
     gap: 30px;
     width: 80%;
 }
-
+.box-container a {
+    text-decoration:none;
+    color: black;
+}
 .box {
+    
     background: rgba(97, 248, 70, 0.8);
     padding: 20px;
     text-align: center;
@@ -94,6 +108,7 @@ header {
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.5s;
+    
 }
 
 .box:hover {
@@ -138,7 +153,7 @@ header {
 /* Section Styles */
 section {
     padding: 250px 20px;
-    background-color: #fcc9b5; /* Light background color for sections */
+    background-color: #c7ffd7; /* Light background color for sections */
     border-radius: 10px;
     margin: 10px auto;
     width: 100%;
@@ -162,6 +177,6 @@ section p {
 }
 
 section:hover {
-    background-color: #f54826; /* Slightly brighter background on hover */
+    background-color: #70ed6c; /* Slightly brighter background on hover */
 }
 
